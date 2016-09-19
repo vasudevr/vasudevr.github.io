@@ -26,6 +26,10 @@
     <!-- Import jquery-->
     <script src="js/jquery-2.1.1.js"></script>
     <script src="js/main.js"></script> <!-- Resource jQuery -->
+    <!--Scrollbar js -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/jquery.mCustomScrollbar.js"></script>
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
 
     <!-- Bootstrap and Font Awesome css -->
     <link href="css/font-awesome.css" rel="stylesheet">
@@ -48,6 +52,8 @@
     <!-- Favicon -->
     <link rel="shortcut icon" href="img/about.jpg">
 
+    <!-- ScrollBar css-->
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css" />
     <!-- Mordernizr -->
     <!--<script src="js/modernizr-2.6.2.min.js"></script>-->
     <!--Codyworks Modernizr-->
@@ -60,7 +66,8 @@
 </head>
 
 <body data-spy="scroll" data-target="#navigation" data-offset="120">
-
+  <!--Scrollbar insert-->
+<div class="mCustomScrollbar" dta-mcs-theme="dark">
     <!-- *** NAVBAR ***
 _________________________________________________________ -->
 
@@ -126,8 +133,8 @@ _________________________________________________________ -->
                <div class="container">
                    <div class="row">
                        <div class="carousel-caption">
-                           <div data-animate="fadeInDown" class="logo">
-                               <img src="img/head-shot.jpg" alt="logo" width="80" class="image img-circle">
+                           <div data-animate="fadeInDown">
+                               <img src="img/head-shot.jpg" alt="Me" width="150" class="image img-circle">
                            </div>
                            <h1 data-animate="fadeInDown">Vasudev Ramachandran</h1>
                           <!-- <h2 data-animate="slideInUp">Technology enthusiast</h2>-->
@@ -290,7 +297,7 @@ _________________________________________________________ -->
 						<div class="col-md-4" data-animate="fadeInUp">
 							<div class="icon"><i class="fa fa-mortar-board"></i>
 								</div>
-								<h3 class="heading">Learning</h3>
+								<h3 class="heading">Tryng my hand at</h3>
 								<p class="text-align-center">C#, Asp.Net, Xamarin, AWS, Reactive Programming, AngularJs and ionic</p>
 						</div>
 					</div>
@@ -1020,7 +1027,6 @@ _________________________________________________________ -->
 
                         <p class="social">
                             <a href="https://www.facebook.com/vasudev.ramachandran.1" class="external facebook" data-animate-hover="shake" data-animate="fadeInUp"><i class="fa fa-facebook"></i></a>
-                            <a href="https://www.instagram.com/vasudevramachandran/" class="external instagram" data-animate-hover="shake" data-animate="fadeInUp"><i class="fa fa-instagram"></i></a>
                             <a href="https://plus.google.com/105054920169194897117" class="external gplus" data-animate-hover="shake" data-animate="fadeInUp"><i class="fa fa-google-plus"></i></a>
                             <a href="vasudevramachandran@gmail.com" class="email" data-animate-hover="shake" data-animate="fadeInUp"><i class="fa fa-envelope"></i></a>
 							              <a href="https://github.com/vasudevr" class="instagram" data-animate-hover="shake" data-animate="fadeInUp"><i class="fa fa-github"></i></a>
@@ -1053,7 +1059,7 @@ _________________________________________________________ -->
 
     </div>
     <!-- /#all -->
-
+  </div><!-- Scrollbar -->
     <!-- #### JAVASCRIPT FILES ### -->
 
     <!-- js base -->
@@ -1090,7 +1096,17 @@ _________________________________________________________ -->
 
     <script src="js/front.js"></script>
 
+    <script>
+		(function($){
+			$(window).on("load",function(){
 
+				$("body").mCustomScrollbar({
+					theme:"minimal"
+				});
+
+			});
+		})(jQuery);
+	</script>
 
 
 

@@ -67,3 +67,18 @@ body #all{
 	/*margin-top: -15px;*/
 	text-align: center;
 	}
+/*
+
+==============
+Hide scrollbar
+==============
+
+*/
+
+body::-webkit-scrollbar{
+	width:0px;
+	background: transparent;
+}
+body::-webkit-scrollbar-thumb{
+	background: #FF0000;
+}
