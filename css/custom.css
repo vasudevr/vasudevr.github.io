@@ -67,6 +67,18 @@ body #all{
 	/*margin-top: -15px;*/
 	text-align: center;
 	}
+
+	/*
+
+	============
+	Paragraphs
+	============
+
+	*/
+
+	.aboutme-text{
+		text-align: justify;
+	}
 /*
 
 ==============
